@@ -1,0 +1,17 @@
+body {
+  background-color: #121212;
+  color: #fff; 
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  background-color: #1e1e1e; 
+  overflow: auto;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 0;
+}
