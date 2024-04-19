@@ -6,6 +6,7 @@ import "./App.css";
 function App() {
   const [notes, setNotes] = useState(() => JSON.parse(localStorage.getItem("notes-app")) || []);
   const [greeting, setGreeting] = useState("");
+  const [darkMode, setDarkMode] = useState(true);
 
   const addNote = (color) => {
     setNotes(prevNotes => [...prevNotes, {
@@ -51,12 +52,13 @@ function App() {
 
   return (
     <div className="App">
-      <Sidebar addNote={addNote} resetNotes={resetNotes} />
+      <Sidebar addNote={addNote} resetNotes={resetNotes} darkMode={darkMode} />
       <NoteContainer
         notes={notes}
         deleteNote={deleteNote}
         updateText={updateText}
         greeting={greeting}
+        darkMode={darkMode}
       />
     </div>
   );

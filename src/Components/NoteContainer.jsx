@@ -6,7 +6,7 @@ const NoteContainer = ({ notes, deleteNote, updateText,greeting }) => {
   const reversedNotes = notes.slice().reverse();
   return (
     <div className="note-container">
-      <h2>{greeting}</h2>
+      <h2>{greeting} - Add Notes Here.</h2>
       <div className="note-container_notes custom-scroll">
         {reversedNotes.length > 0 ? (
           reversedNotes.map((note) => (
